@@ -14,6 +14,15 @@ public class AverageImpl {
 	
 	this.ints=ints;
   }
+  public float getAverage(){
+  	begin = System.nanoTime();
+  	int result = 0;
+  	for (int i = 0; i < ints.length; i++) {
+  		result += ints[i];
+  	}
+  	end = System.nanoTime();
+  	return (float) result/ints.length;
+  }
   
   public static float averageTwoNumbers(int a, int b){
 	return (float) (a+b)/2;
